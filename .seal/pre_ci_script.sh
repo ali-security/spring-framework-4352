@@ -11,4 +11,4 @@ cd /tmp/netty
 
 git clone --depth=1 --branch jetty-9.4.14.v20181114 https://github.com/jetty/jetty.project.git /tmp/jetty
 cd /tmp/jetty
-mvn install -DskipTests
+~/.m2/wrapper/dists/apache-maven-*-bin/*/apache-maven-*/bin/mvn install -DskipTests
