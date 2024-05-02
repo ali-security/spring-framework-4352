@@ -172,19 +172,19 @@ public class BeanWrapperTests extends AbstractPropertyAccessorTests {
 		
 		accessor = createAccessor(new UrlResource("https://spring.io"));
 
-		assertThat(accessor.isReadableProperty("class.package")).isFalse();
-		assertThat(accessor.isReadableProperty("class.module")).isFalse();
-		assertThat(accessor.isReadableProperty("class.classLoader")).isFalse();
-		assertThat(accessor.isReadableProperty("class.name")).isTrue();
-		assertThat(accessor.isReadableProperty("class.simpleName")).isTrue();
-		assertThat(accessor.isReadableProperty("URL.protocol")).isTrue();
-		assertThat(accessor.isReadableProperty("URL.host")).isTrue();
-		assertThat(accessor.isReadableProperty("URL.port")).isTrue();
-		assertThat(accessor.isReadableProperty("URL.file")).isTrue();
-		assertThat(accessor.isReadableProperty("URL.content")).isFalse();
-		assertThat(accessor.isReadableProperty("inputStream")).isFalse();
-		assertThat(accessor.isReadableProperty("filename")).isTrue();
-		assertThat(accessor.isReadableProperty("description")).isTrue();
+		assertFalse(accessor.isReadableProperty("class.package"));
+		assertFalse(accessor.isReadableProperty("class.module"));
+		assertFalse(accessor.isReadableProperty("class.classLoader"));
+		assertTrue(accessor.isReadableProperty("class.name"));
+		assertTrue(accessor.isReadableProperty("class.simpleName"));
+		assertTrue(accessor.isReadableProperty("URL.protocol"));
+		assertTrue(accessor.isReadableProperty("URL.host"));
+		assertTrue(accessor.isReadableProperty("URL.port"));
+		assertTrue(accessor.isReadableProperty("URL.file"));
+		assertFalse(accessor.isReadableProperty("URL.content"));
+		assertFalse(accessor.isReadableProperty("inputStream"));
+		assertTrue(accessor.isReadableProperty("filename"));
+		assertTrue(accessor.isReadableProperty("description"));
 	}
 
 	@Test
