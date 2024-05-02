@@ -1,6 +1,5 @@
 buildscript {
 	repositories {
-		maven { url "https://repo.spring.io/plugins-release" }
 		mavenCentral()
 		mavenLocal()
 	}
@@ -149,7 +148,6 @@ configure(allprojects) { project ->
 	}
 
 	repositories {
-		maven { url "https://repo.spring.io/libs-release" }
 		mavenCentral()
 		mavenLocal()
 	}
